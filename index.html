@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- BOOT -->
+<div id="boot">
+<pre>
+Initializing system...
+Loading modules...
+Starting interface...
+</pre>
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop" class="hidden">
+
+  <!-- MAIN WINDOW -->
+  <div class="window open" id="win-main">
+    <div class="title-bar">
+      <span class="title">main.exe</span>
+      <button class="close" onclick="closeWin('win-main')">✕</button>
+    </div>
+    <div class="window-content">
+      <h1 class="glitch" data-text="Welcome">Welcome</h1>
+      <p>System stable.<br>Minimal mode active.</p>
+    </div>
+  </div>
+
+  <!-- NOTES WINDOW -->
+  <div class="window hidden-win" id="win-notes">
+    <div class="title-bar">
+      <span class="title">notes.txt</span>
+      <button class="close" onclick="closeWin('win-notes')">✕</button>
+    </div>
+    <div class="window-content small">
+      ▸ fragments<br>
+      ▸ experiments<br>
+      ▸ quiet ideas
+    </div>
+  </div>
+
+  <!-- PROFILE WINDOW -->
+  <div class="window hidden-win" id="win-profile">
+    <div class="title-bar">
+      <span class="title">profile.exe</span>
+      <button class="close" onclick="closeWin('win-profile')">✕</button>
+    </div>
+
+    <div class="profile">
+      <img src="pfp.gif" class="pfp" />
+
+      <div class="bio">
+        <h3>Tyler / Tanos</h3>
+        <p>
+          Builder of strange systems. <br>
+          Hi i am Tyler Tanos, im a Programmer, and whats fascinating? I learned how to program at the age of 7. My mentality makes me feel like an adult already at such age.
+        </p>
+      </div>
+
+      <div class="profile-buttons">
+        <button onclick="openLink('https://youtube.com/@tylertanos?si=MLcUVdYDr5R48RJj')">YouTube</button>
+        <button onclick="openLink('https://github.com/Tylers-Games')">GitHub</button>
+        <button onclick="openLink('https://steamcommunity.com/profiles/76561198788960406/')">Steam</button>
+        <button class="games-btn" onclick="openChrome()">Games</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHROME WINDOW -->
+  <div class="window hidden-win" id="win-chrome">
+    <div class="title-bar">
+      <span class="title">Chrome.exe</span>
+      <button class="close" onclick="closeWin('win-chrome')">✕</button>
+    </div>
+
+    <div class="url-bar">
+      https://github.com/Tylers-Games
+    </div>
+
+    <div class="browser-content">
+      <iframe src="https://github.com/Tylers-Games"></iframe>
+    </div>
+  </div>
+
+  <!-- TERMINAL -->
+  <div class="terminal crt">
+    <pre id="terminal-text"></pre>
+  </div>
+
+  <!-- TASKBAR -->
+  <div class="taskbar">
+    <button onclick="openWin('win-main')">▣</button>
+    <button onclick="openWin('win-notes')">✎</button>
+    <button onclick="openWin('win-profile')">☺</button>
+    <span class="clock" id="clock"></span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

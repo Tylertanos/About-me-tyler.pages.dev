@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background: black;
+  color: #0f0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hidden { display: none; }
+.hidden-win { display: none; }
+
+#boot {
+  padding: 20px;
+}
+
+.window {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 420px;
+  background: #000;
+  border: 1px solid #0f0;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  background: #020;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+.window-content.small {
+  font-size: 12px;
+}
+
+.close {
+  background: none;
+  color: #0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #020;
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+}
+
+.taskbar button {
+  background: black;
+  border: 1px solid #0f0;
+  color: #0f0;
+}
+
+.clock {
+  margin-left: auto;
+}
+
+.terminal {
+  position: fixed;
+  bottom: 30px;
+  left: 10px;
+  width: 320px;
+  height: 120px;
+  border: 1px solid #0f0;
+  padding: 6px;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 80px auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.pfp {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #0f0;
+}
+
+.profile-buttons {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.profile-buttons button {
+  border: 1px solid #0f0;
+  background: black;
+  color: #0f0;
+}
+
+.games-btn {
+  grid-column: span 3;
+}
+
+.win-chrome {
+  width: 520px;
+  height: 360px;
+}
+
+.url-bar {
+  font-size: 11px;
+  padding: 4px;
+  border-bottom: 1px solid #0f0;
+}
+
+.browser-content {
+  height: calc(100% - 24px);
+}
+
+.browser-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: black;
+}
